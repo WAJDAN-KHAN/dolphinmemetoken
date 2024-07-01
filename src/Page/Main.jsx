@@ -6,7 +6,7 @@ export const Main = () => {
   return (
     <div>
       <Presale />
-      {/* <UnleashSection /> */}
+      <UnleashSection />
     </div>
   );
 };

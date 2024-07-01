@@ -3,21 +3,27 @@
 @tailwind utilities;
 
 .font {
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 /* This is an inline style, you can also use an external stylesheet */
 .hover-underline-animation {
   position: relative;
 }
-.poppins{
+.poppins {
   font-family: 'Poppins', sans-serif !important;
 }
 .neon {
   font-family: 'Tilt Neon', sans-serif !important;
 }
+.sue {
+  font-family: 'Sue Ellen Francisco', sans-serif !important;
+}
+.roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
 .hover-underline-animation::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -2px; /* Adjust this value to control the distance of the underline from the text */
   left: 0;
@@ -51,7 +57,7 @@ a:hover {
 }
 
 .bg-download {
-  background-image: url("../src//assets/Hero/hero-bg.svg");
+  background-image: url('../src//assets/Hero/hero-bg.svg');
   background-color: black;
   background-position: 100% 50%;
   background-size: auto;

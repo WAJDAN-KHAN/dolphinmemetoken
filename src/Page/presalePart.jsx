@@ -86,7 +86,7 @@ export const Presale = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col fixed right-0 top-[30%]">
+      <div className="flex flex-col fixed right-0 top-[30%] z-30">
         {social.map((social) => (
           <a
             href=""
