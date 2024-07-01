@@ -3,8 +3,8 @@ import React from 'react';
 export const UnleashSection = () => {
   return (
     <div>
-      <div className="py-[100px] relative" style={{ background: 'linear-gradient(180deg, #FFFFFF 68%, #2596BE 100%)' }}>
-        <div className="absolute w-full " style={{ transform: 'rotate(180deg)' }}>
+      <div className="pt-[100px]" style={{ background: 'linear-gradient(180deg, #FFFFFF 68%, #2596BE 100%)' }}>
+        <div style={{ transform: 'rotate(180deg)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
             <path
               class="elementor-shape-fill"

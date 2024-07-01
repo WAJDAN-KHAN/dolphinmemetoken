@@ -60,7 +60,7 @@ export const BuyClaim = () => {
             <input
               type="text"
               id="pay-input"
-              className="w-full p-4 text-sm text-black bg-transparent outline-none ring-1 ring-gray-600"
+              className="w-full p-4 text-sm text-black bg-transparent outline-[#229ed2] ring-1 ring-gray-600"
               placeholder="0"
             ></input>
           </div>
@@ -71,7 +71,7 @@ export const BuyClaim = () => {
             <input
               type="text"
               id="recieve-input"
-              className="w-full p-4 text-sm text-black bg-transparent outline-none ring-1 ring-gray-600"
+              className="w-full p-4 text-sm text-black bg-transparent outline-[#229ed2] ring-1 ring-gray-600"
               disabled
               value={'0'}
             />
