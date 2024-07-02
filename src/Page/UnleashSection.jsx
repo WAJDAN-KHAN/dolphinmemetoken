@@ -33,7 +33,7 @@ export const UnleashSection = () => {
           fill="#2596BE"
         ></path>
       </svg>
-      <div className="container mx-auto max-w-full w-full lg:max-w-[1140px]  ">
+      <div className="container mx-auto max-w-full w-full lg:max-w-[1140px]  px-[20px] ">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
           <div>
             <h4 className="woodmart-title-container  text-[36px] text-[#242424] poppins font-semibold">

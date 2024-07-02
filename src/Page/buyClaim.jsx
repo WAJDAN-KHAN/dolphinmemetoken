@@ -43,6 +43,26 @@ export const BuyClaim = () => {
           <span className="font-bold tracking-widest">1 $DICE = $0.0825 </span>
           <hr className="border-1 border-[#4b5563] flex-1" />
         </div>
+        <div className="mt-8 grid lg:grid-cols-12 gap-x-2 gap-y-2 my-2">
+          <button
+            className="col-span-4 flex text-white py-2 items-center justify-center gap-x-1 border border-primary text-sm font-medium uppercase tracking-widest bg-[#229ed2]"
+            type="button"
+          >
+            Sol
+          </button>
+          <button
+            className="col-span-4 flex py-2 items-center justify-center gap-x-1 border border-primary text-sm font-medium uppercase tracking-widest hover:bg-[#229ed2] hover:text-white"
+            type="button"
+          >
+            Eth
+          </button>
+          <button
+            className="col-span-4 flex py-2 items-center justify-center gap-x-1 border border-primary text-sm font-medium uppercase tracking-widest hover:bg-[#229ed2] hover:text-white"
+            type="button"
+          >
+            BNB
+          </button>
+        </div>
         <div className="relative flex flex-col items-center justify-start w-full h-full gap-2 py-0 pt-2">
           <div className="w-full py-3 text-center cursor-pointer">
             <h4 className="mb-2 text-base">Only send SOL from hot wallets (eg Phantom) to this address:</h4>

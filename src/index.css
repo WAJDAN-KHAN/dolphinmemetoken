@@ -22,6 +22,12 @@
 .roboto {
   font-family: 'Roboto', sans-serif !important;
 }
+.trebuchet {
+  font-family: 'Trebuchet MS', sans-serif !important;
+}
+.lato {
+  font-family: 'Lato', sans-serif;
+}
 .hover-underline-animation::after {
   content: '';
   position: absolute;
