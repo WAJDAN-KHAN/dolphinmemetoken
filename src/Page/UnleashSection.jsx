@@ -1,8 +1,15 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
 export const UnleashSection = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="pt-[100px]" style={{ background: 'linear-gradient(180deg, #FFFFFF 68%, #2596BE 100%)' }}>
         <div style={{ transform: 'rotate(180deg)' }}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -47,9 +54,10 @@ export const UnleashSection = () => {
             </span>
           </div>
         </div>
-        <div className="grid grid-cols-1 py-10 gap-10 md:grid-cols-2 items-start ">
+        <div className="grid grid-cols-1 py-10 gap-10 md:grid-cols-2 items-start  ">
           <div
-            className="bg-[#1E81B0] md:w-[510px] w-full hover:bg-[#666666] transition-all p-[30px] flex gap-[20px] rounded-[5px]"
+            className="bg-[#1E81B0] md:w-[510px]  w-full hover:bg-[#666666] transition-all p-[30px] flex gap-[20px] rounded-[5px]"
+            data-aos="fade-right"
             style={{ boxShadow: '2px 3px 14px transparent' }}
           >
             <div className="flex-shrink-0 w-[70px] h-[56px]">
@@ -81,6 +89,7 @@ export const UnleashSection = () => {
           </div>
           <div
             className="bg-[#1E81B0] md:w-[510px] w-full hover:bg-[#666666] transition-all p-[30px] flex gap-[20px] rounded-[5px]"
+            data-aos="fade-left"
             style={{ boxShadow: '2px 3px 14px transparent' }}
           >
             <div className="flex-shrink-0 w-[70px] h-[56px]">

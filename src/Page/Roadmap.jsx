@@ -1,17 +1,15 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
-const listItems = [
-  { id: '4dc2a80', content: '10% Airdrop:' },
-  { id: '763c11e', content: '5% Charity:' },
-  { id: 'e9dd09a', content: '10% Marketing / Future Development' },
-  { id: 'c502e2b', content: '10% Liquidity pool:' },
-  { id: '0ffc6a4', content: '30% Pre-sale:' },
-  { id: '50aaa13', content: '10% Team:' },
-  { id: '4544d83', content: '25% Public sale:' },
-];
 export const Roadmap = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div className="py-[40px]">
+    <div className="py-[40px] overflow-hidden">
       <div className="text-center">
         <h1 className="text-[22px] md:text-[41px] text-[#242424] poppins font-semibold ">Roadmap</h1>
         <p className="text-[17px] roboto" style={{ color: 'rgb(119, 119, 119)' }}>
@@ -52,7 +50,7 @@ export const Roadmap = () => {
               Future expansion plans for the DOLPHIN MEME TOKENS!
             </p>
           </div>
-          <div className="my-auto">
+          <div className="my-auto" data-aos="fade-left">
             <img src="/assets/IMG_7939-768x768-1-300x300.webp" className="md:max-w-[300px] max-w-full h-auto" alt="" />
           </div>
         </div>

@@ -1,11 +1,18 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
 export const Faq = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div className="py-[40px]">
+    <div className="py-[40px] overflow-hidden">
       <div className="container mx-auto max-w-full w-full lg:max-w-[1140px]  px-[20px] pt-5">
         <div className="grid grid-cols-1 md:grid-cols-2  ">
-          <div className="m-auto">
+          <div className="m-auto" data-aos="fade-left">
             <img src="/assets/IMG_7941-768x768-1-300x300.webp" className="md:max-w-[300px] max-w-full h-auto" alt="" />
           </div>
           <div className="max-w-full md:max-w-[550px] mx-auto w-full ">

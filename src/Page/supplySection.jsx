@@ -1,8 +1,15 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
 export const SupplySection = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div className="relative bg-[#1E81B0] pb-[50px]">
+    <div className="relative bg-[#1E81B0] pb-[50px] overflow-hidden">
       <div
         className="elementor-shape elementor-shape-top absolute overflow-hidden top-[-1px] w-full"
         data-negative="false"
@@ -32,13 +39,16 @@ export const SupplySection = () => {
       <div className="container mx-auto px-[20px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-[64px] items-center  ">
           <div className="contentt md:pl-[27px]">
-            <h1 className="text-white text-[27px] font-normal roboto">
+            <h1 className="text-white text-[27px] font-normal roboto" data-aos="fade-right">
               Limited Supply & Strategic Token Burn: Enhancing Dolphin Token Value
             </h1>
-            <h4 className="woodmart-title-container py-2 title wd-fontsize-l text-[#242424] text-[22px] poppins font-semibold">
+            <h4
+              className="woodmart-title-container py-2 title wd-fontsize-l text-[#242424] text-[22px] poppins font-semibold"
+              data-aos="fade-right"
+            >
               ONLY <u> 77,777,777 </u> tokens for Dolphin MEME will ever exist!
             </h4>
-            <div className=" font-normal poppins text-[17px] text-white">
+            <div className=" font-normal poppins text-[17px] text-white" data-aos="fade-right">
               Burning of Dolphin Token Sales
               <br />
               At Dolphin, we are committed to creating a sustainable and thriving ecosystem for our token holders. To
@@ -52,7 +62,7 @@ export const SupplySection = () => {
               </button>
             </div>
           </div>
-          <div className="">
+          <div className="" data-aos="fade-left">
             <img
               src="/assets/IMG_7930-768x768-1.webp"
               className="md:max-w-[479px] max-w-full w-full h-auto rounded-[300px]"

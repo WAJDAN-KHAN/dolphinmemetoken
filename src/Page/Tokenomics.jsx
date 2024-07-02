@@ -1,4 +1,6 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
 const listItems = [
   { id: '4dc2a80', content: '10% Airdrop:' },
@@ -10,8 +12,13 @@ const listItems = [
   { id: '4544d83', content: '25% Public sale:' },
 ];
 export const Tokenomics = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div className="py-[40px]">
+    <div className="py-[40px] overflow-hidden">
       <div className="text-center">
         <h1 className="text-[22px] md:text-[41px] text-[#242424] poppins font-semibold mb-[10px]">Tokenomics</h1>
         <p className="text-[14px] roboto" style={{ color: 'rgb(119, 119, 119)' }}>
@@ -20,10 +27,10 @@ export const Tokenomics = () => {
       </div>
       <div className="container mx-auto max-w-full w-full lg:max-w-[1140px]  px-[20px] pt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="">
+          <div className="" data-aos="fade-right">
             <img src="/assets/IMG_7959-768x412-1.webp" className="max-w-full w-full h-auto" alt="" />
           </div>
-          <div>
+          <div data-aos="fade-left">
             <ul className="list-none text-[14px]">
               {listItems.map((item) => (
                 <li className="flex gap-[10px] mb-[15px] relative items-center transition-all">

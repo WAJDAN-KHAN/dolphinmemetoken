@@ -30,15 +30,15 @@ const team = [
 
 export const OurTeam = () => {
   return (
-    <div className="py-[40px]">
+    <div className="py-[40px] overflow-hidden">
       <div className="container mx-auto max-w-full w-full lg:max-w-[1140px]  px-[20px]">
         <div className="grid grid-cols-12 items-center gap-7">
-          <div className="col-span-4">
+          <div className="col-span-12 md:col-span-4">
             <div className="liner-continer">
               <h4 className="text-[34px] text-[#242424] font-semibold poppins"> Meet our team</h4>
             </div>
           </div>
-          <div className="col-span-8">
+          <div className="col-span-12 md:col-span-8">
             <div>
               <p className="roboto text-[18px]" style={{ color: 'rgb(122, 122, 122)' }}>
                 At Dolphin, we are proud to introduce a diverse team of professionals dedicated to driving innovation

@@ -1,12 +1,20 @@
-import React from 'react';
+import Aos from 'aos';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
 
 export const HowWorks = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <div className="py-[40px]">
+    <div className="py-[40px] overflow-hidden">
       <div className="container mx-auto px-[20px] ">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 items-start">
           <div
             className="bg-[#1E81B0] md:w-[510px] mx-auto w-full hover:bg-[#666666] transition-all p-[30px] flex gap-[20px] rounded-[5px]"
+            data-aos="fade-right"
             style={{ boxShadow: '2px 3px 14px transparent' }}
           >
             <div>
@@ -31,6 +39,7 @@ export const HowWorks = () => {
           </div>
           <div
             className="bg-[#1E81B0] md:w-[510px] w-full mx-auto hover:bg-[#666666] transition-all p-[30px] flex gap-[20px] rounded-[5px]"
+            data-aos="fade-left"
             style={{ boxShadow: '2px 3px 14px transparent' }}
           >
             <div>
