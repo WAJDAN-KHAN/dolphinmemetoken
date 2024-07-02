@@ -3,6 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const menuItems = [
     { id: 'menu-item-84', to: 'home', text: 'Home' },
@@ -44,6 +45,10 @@ export const Header = () => {
     };
   }, []);
 
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   return (
     <div className="fixed z-50 w-full">
       <div className="bg-[#2596be] py-2">
@@ -73,6 +78,7 @@ export const Header = () => {
                         smooth={true}
                         duration={500}
                         className="font-bold text-[16px] capitalize text-[#fff] hover:text-[#ffffffcc] cursor-pointer"
+                        onClick={() => setIsDrawerOpen(false)}
                       >
                         {menu.text}
                       </ScrollLink>
@@ -81,12 +87,20 @@ export const Header = () => {
                 ))}
               </ul>
             </div>
-            <div className="hidden md:flex flex-wrap justify-center gap-3">
+            <div className="hidden lg:flex flex-wrap justify-center gap-3">
               {social.map((icon) => (
                 <a href="#" key={icon.id} className="w-[20px] flex items-center justify-center h-[20px]">
                   <img src={icon.img} alt="" />
                 </a>
               ))}
+            </div>
+            <div className="block lg:hidden burger-menu">
+              <img
+                src="/assets/menu.png"
+                className="max-w-full w-full h-auto cursor-pointer"
+                alt="Menu"
+                onClick={toggleDrawer}
+              />
             </div>
           </div>
         </div>
@@ -113,6 +127,55 @@ export const Header = () => {
           />
         </svg>
       )}
+      {/* Drawer Component */}
+      <div
+        className={`fixed top-0 left-0 w-64 h-full bg-white z-50 transform ${
+          isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <div className="flex flex-col ">
+          <div className="border-b flex justify-end border-[#0000001b]">
+            <button className="self-end mb-4 p-4 " onClick={toggleDrawer}>
+              Close
+            </button>
+          </div>
+          <ul className="list-none p-0 m-0">
+            {menuItems.map((menu) => (
+              <li key={menu.id} className="mb-4 px-4 py-2 border-b border-[#0000001b]">
+                {menu.href ? (
+                  <a
+                    href={menu.href}
+                    target={menu.target}
+                    className="font-semibold   text-[13px] capitalize text-[#333] hover:text-[#2596becc]"
+                    onClick={() => setIsDrawerOpen(false)}
+                  >
+                    {menu.text}
+                  </a>
+                ) : (
+                  <ScrollLink
+                    to={menu.to}
+                    smooth={true}
+                    duration={500}
+                    className="font-semibold text-[13px]   capitalize text-[#333] hover:text-[#2596becc] cursor-pointer"
+                    onClick={() => setIsDrawerOpen(false)}
+                  >
+                    {menu.text}
+                  </ScrollLink>
+                )}
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap justify-center gap-3">
+            {social.map((icon) => (
+              <a href="#" key={icon.id} className="w-[20px] flex items-center justify-center h-[20px]">
+                <img src={icon.img} alt="" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* Overlay */}
+      {isDrawerOpen && <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={toggleDrawer}></div>}
     </div>
   );
 };
