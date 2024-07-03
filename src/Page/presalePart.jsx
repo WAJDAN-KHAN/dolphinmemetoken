@@ -5,31 +5,37 @@ const social = [
     id: 1,
     img: '/assets/fb.png',
     bg: '#365493',
+    name: 'Facebook',
   },
   {
     id: 2,
     img: '/assets/x.png',
     bg: '#000',
+    name: 'X',
   },
   {
     id: 3,
     img: '/assets/insta.png',
     bg: '#774430',
+    name: 'Instagram',
   },
   {
     id: 4,
     img: '/assets/youtube.png',
     bg: '#CB2027',
+    name: 'Youtube',
   },
   {
     id: 5,
     img: '/assets/tik-tok.png',
     bg: '#010101',
+    name: 'Tiktok',
   },
   {
     id: 6,
     img: '/assets/telegram.png',
     bg: '#37AEE2',
+    name: 'Telegram',
   },
 ];
 export const Presale = () => {
@@ -90,7 +96,7 @@ export const Presale = () => {
         {social.map((social) => (
           <a
             href=""
-            className={`w-[40px] h-[40px]   flex justify-center items-center  `}
+            className={`w-[40px] h-[40px]   flex justify-center items-center    gap-2`}
             style={{ background: social.bg }}
           >
             <img src={social.img} className="w-[16px] h-auto" alt="" />
