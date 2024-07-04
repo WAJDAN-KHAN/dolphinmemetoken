@@ -6,36 +6,42 @@ const social = [
     img: '/assets/fb.png',
     bg: '#365493',
     name: 'Facebook',
+    link: 'https://www.facebook.com/dolphinesolana',
   },
   {
     id: 2,
     img: '/assets/x.png',
     bg: '#000',
     name: 'X',
+    link: 'https://x.com/DolphinSolana24',
   },
   {
     id: 3,
     img: '/assets/insta.png',
     bg: '#774430',
     name: 'Instagram',
+    link: 'https://www.instagram.com/dolphinsolana/',
   },
   {
     id: 4,
     img: '/assets/youtube.png',
     bg: '#CB2027',
     name: 'Youtube',
+    link: 'https://www.youtube.com/@DolphinSolana/featured',
   },
   {
     id: 5,
     img: '/assets/tik-tok.png',
     bg: '#010101',
     name: 'Tiktok',
+    link: 'https://www.tiktok.com/@dolphinsolana',
   },
   {
     id: 6,
     img: '/assets/telegram.png',
     bg: '#37AEE2',
     name: 'Telegram',
+    link: 'https://t.me/DolphinSolana1',
   },
 ];
 export const Presale = () => {
@@ -80,7 +86,8 @@ export const Presale = () => {
               <div className="flex gap-3 items-center">
                 {social.map((social) => (
                   <a
-                    href=""
+                    href={social.link}
+                    target="_blank"
                     className={`w-[40px] h-[40px]   flex justify-center items-center rounded-[5px]`}
                     style={{ background: social.bg }}
                   >
@@ -95,7 +102,8 @@ export const Presale = () => {
       <div className="hidden lg:flex flex-col fixed right-0 top-[30%] z-30">
         {social.map((social) => (
           <a
-            href=""
+            href={social.link}
+            target="_blank"
             className={`w-[40px] h-[40px]   flex justify-center items-center    gap-2`}
             style={{ background: social.bg }}
           >

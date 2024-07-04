@@ -80,3 +80,14 @@ a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   /* column-gap: ; */
 }
+.transition-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.transition-content.expanded {
+  max-height: 1000px; /* Large enough value to accommodate the content */
+  opacity: 1;
+}

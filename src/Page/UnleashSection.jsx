@@ -8,6 +8,9 @@ export const UnleashSection = () => {
       duration: 1200,
     });
   }, []);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className="overflow-hidden">
       <div className="pt-[100px]" style={{ background: 'linear-gradient(180deg, #FFFFFF 68%, #2596BE 100%)' }}>
@@ -81,7 +84,10 @@ export const UnleashSection = () => {
                 </strong>
               </div>
               <div className="mt-3">
-                <button className="bg-[#F3F3F3] text-[#3E3E3E] py-[5px] px-[20px] text-[13px] border-none">
+                <button
+                  className="bg-[#F3F3F3] min-h-[42px] lato font-semibold text-[#3E3E3E] py-[5px] px-[20px] text-[13px] border-none"
+                  onClick={scrollToTop}
+                >
                   CONTACT US
                 </button>
               </div>
@@ -108,9 +114,11 @@ export const UnleashSection = () => {
                 </strong>
               </div>
               <div className="mt-3">
-                <button className="bg-[#F3F3F3] text-[#3E3E3E] py-[5px] px-[20px] text-[13px] border-none">
-                  CONTACT US
-                </button>
+                <a href="https://www.kahoostore.com/" target="_blank">
+                  <button className="bg-[#F3F3F3] min-h-[42px] lato font-semibold text-[#3E3E3E] py-[5px] px-[20px] text-[13px] border-none">
+                    Shop Now
+                  </button>
+                </a>
               </div>
             </div>
           </div>
